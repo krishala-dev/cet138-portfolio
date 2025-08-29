@@ -1,0 +1,218 @@
+/* General Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #2c3e50;
+    padding-top: 76px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, .navbar-brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+}
+
+/* Navigation */
+.navbar {
+    background: transparent;
+    transition: all 0.3s ease;
+    padding: 1rem 0;
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+    color: #fff !important;
+}
+
+.navbar-nav .nav-link {
+    color: #fff !important;
+    font-weight: 500;
+    margin: 0 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffd166 !important;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(26, 36, 46, 0.7), rgba(26, 36, 46, 0.8)), url('../images/hero-bg.jpg') no-repeat center center/cover;
+    height: 100vh;
+    margin-top: -76px;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.hero-content .lead {
+    font-size: 1.4rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.btn-outline-light {
+    border: 2px solid #fff;
+    color: #fff;
+    padding: 12px 30px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-light:hover {
+    background: #fff;
+    color: #2c3e50;
+    transform: translateY(-2px);
+}
+
+/* Section Titles */
+.section-title {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    position: relative;
+    padding-bottom: 15px;
+    font-weight: 300;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 60px;
+    height: 2px;
+    background: #ffd166;
+    transform: translateX(-50%);
+}
+
+/* Menu Cards */
+.menu-card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    background: #fff;
+}
+
+.menu-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-wrapper {
+    overflow: hidden;
+    height: 250px;
+}
+
+.menu-card .card-img-top {
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.menu-card:hover .card-img-top {
+    transform: scale(1.05);
+}
+
+.menu-card .card-body {
+    padding: 1.5rem;
+}
+
+.menu-card .card-title {
+    color: #2c3e50;
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.menu-card .card-text {
+    color: #6c757d;
+    margin-bottom: 1rem;
+}
+
+.price {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #ff6b6b;
+    margin: 0;
+}
+
+/* About Section */
+.bg-light {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%) !important;
+}
+
+/* Contact Section */
+.card {
+    border: none;
+    border-radius: 20px;
+}
+
+.form-floating .form-control {
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+    padding: 1rem;
+    height: auto;
+}
+
+.form-floating label {
+    padding: 1rem;
+    color: #6c757d;
+}
+
+.form-control:focus {
+    border-color: #ffd166;
+    box-shadow: 0 0 0 0.2rem rgba(255, 209, 102, 0.25);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ff8e8e 100%);
+    border: none;
+    padding: 12px 40px;
+    border-radius: 25px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+}
+
+/* Icons */
+.bi {
+    transition: color 0.3s ease;
+}
+
+.bi:hover {
+    color: #ffd166 !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-content .lead {
+        font-size: 1.1rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .ps-lg-5 {
+        padding-left: 0 !important;
+        margin-top: 2rem;
+    }
+}

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Demo - Aurora Brews</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="assets/css/aurora-style.css" rel="stylesheet">
+    <style>
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 2rem 0;
+        }
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            height: 200px;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(40, 19, 6, 0.8);
+            color: white;
+            padding: 10px;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+        .gallery-item:hover .gallery-caption {
+            transform: translateY(0);
+        }
+        .coffee-animation {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(45deg, #6f4e37, #3e2723);
+            border-radius: 50%;
+            margin: 2rem auto;
+            position: relative;
+            animation: coffeeSteam 3s infinite;
+        }
+        @keyframes coffeeSteam {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-20px) scale(1.05); }
+        }
+        .custom-button {
+            background: linear-gradient(45deg, #8B5A2B, #6f4e37);
+            border: none;
+            padding: 12px 24px;
+            color: white;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(139, 90, 43, 0.3);
+        }
+        .custom-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(139, 90, 43, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-cup-hot-fill me-2"></i>Aurora Brews
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="html-demo.html">HTML</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="css-demo.html">CSS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="bootstrap-demo.html">Bootstrap</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript-demo.html">JavaScript</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="bg-dark text-white py-5 mt-5">
+        <div class="container text-center">
+            <h1 class="display-4">CSS Styling</h1>
+            <p class="lead">Bringing beauty and style to our cafe's website</p>
+        </div>
+    </header>
+
+    <main class="container my-5 py-5">
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <h2>Our Coffee Gallery</h2>
+                <p>This gallery showcases custom CSS techniques including Grid layout, transitions, and animations.</p>
+
+                <div class="gallery">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Espresso">
+                        <div class="gallery-caption">Espresso</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1561047029-3000c68339ca?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Cappuccino">
+                        <div class="gallery-caption">Cappuccino</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Latte Art">
+                        <div class="gallery-caption">Latte Art</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Coffee Beans">
+                        <div class="gallery-caption">Premium Beans</div>
+                    </div>
+                </div>
+
+                <div class="text-center my-5">
+                    <div class="coffee-animation"></div>
+                    <p class="mt-2">CSS Animation: Hovering coffee cup</p>
+                </div>
+
+                <div class="text-center my-5">
+                    <button class="custom-button">Hover Me!</button>
+                    <p class="mt-2">Custom button with gradient and hover effects</p>
+                </div>
+
+                <div class="alert alert-info mt-4">
+                    <h5><i class="bi bi-info-circle-fill"></i> CSS Techniques Demonstrated</h5>
+                    <ul>
+                        <li><strong>CSS Grid:</strong> For the responsive gallery layout</li>
+                        <li><strong>Transitions:</strong> Smooth hover effects on images and buttons</li>
+                        <li><strong>Animations:</strong> Keyframe animation for the coffee steam effect</li>
+                        <li><strong>Custom Properties:</strong> Using CSS variables for consistent colors</li>
+                        <li><strong>Flexbox:</strong> For alignment and positioning</li>
+                        <li><strong>Gradients:</strong> Creating smooth color transitions</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-black text-white-50 text-center py-4">
+        <div class="container">
+            <p>&copy; 2025 Aurora Brews. A demonstration site for CET138 Full Stack Development.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

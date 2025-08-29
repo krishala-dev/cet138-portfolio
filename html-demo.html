@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Demo - Aurora Brews</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="assets/css/aurora-style.css" rel="stylesheet">
+    <style>
+        .code-example {
+            background-color: #f8f9fa;
+            border-left: 4px solid #8B5A2B;
+            padding: 15px;
+            margin: 20px 0;
+            font-family: monospace;
+        }
+        .semantic-demo {
+            border: 2px dashed #8B5A2B;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-cup-hot-fill me-2"></i>Aurora Brews
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="html-demo.html">HTML</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="css-demo.html">CSS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="bootstrap-demo.html">Bootstrap</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript-demo.html">JavaScript</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="bg-dark text-white py-5 mt-5">
+        <div class="container text-center">
+            <h1 class="display-4">HTML Structure</h1>
+            <p class="lead">The foundation of every web page</p>
+        </div>
+    </header>
+
+    <main class="container my-5 py-5">
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <h2>Semantic HTML for Our Story</h2>
+                <p>This "Our Story" page demonstrates proper semantic HTML structure, which helps with accessibility and SEO.</p>
+
+                <div class="semantic-demo">
+                    <header class="text-center mb-5">
+                        <h1>Our Coffee Journey</h1>
+                        <p class="lead">From bean to cup - our passion for perfection</p>
+                    </header>
+
+                    <nav aria-label="Secondary navigation" class="mb-4">
+                        <ul class="nav justify-content-center">
+                            <li class="nav-item"><a href="#origins" class="nav-link">Origins</a></li>
+                            <li class="nav-item"><a href="#process" class="nav-link">Process</a></li>
+                            <li class="nav-item"><a href="#team" class="nav-link">Team</a></li>
+                        </ul>
+                    </nav>
+
+                    <article>
+                        <section id="origins" class="mb-5">
+                            <h2>Our Origins</h2>
+                            <p>Founded in 2023, Aurora Brews began as a small passion project between two university friends who shared a love for quality coffee.</p>
+                            <figure class="text-center">
+                                <img src="assets/images/location.jpg" alt="Our first coffee shop location" class="img-fluid rounded">
+                            
+                            </figure>
+                        </section>
+
+                        <section id="process" class="mb-5">
+                            <h2>Our Process</h2>
+                            <p>We're committed to ethical sourcing and sustainable practices throughout our supply chain.</p>
+                            <h3>Bean Selection</h3>
+                            <p>We work directly with farmers who use sustainable growing methods.</p>
+                            <h3>Roasting</h3>
+                            <p>Our small-batch roasting process ensures consistent quality and flavor development.</p>
+                        </section>
+
+                        <section id="team">
+                            <h2>Meet Our Team</h2>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h4>Namjoon - Head Barista</h4>
+                                    <pre>10 years of coffee experience with a passion for latte art.
+                                        Leads the art of coffee, from bean to brew.</pre>
+                                </div>
+                                <div class="col-md-6">
+                                    <h4>Taehyung - Head Baker</h4>
+                                    <p>Leads the bakery team in crafting high-quality breads and pastries, ensuring consistency, creativity, and excellence in every product.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+
+                    <aside class="bg-light p-4 rounded mt-5">
+                        <h3>Did You Know?</h3>
+                        <p>We compost all our coffee grounds and use them in local community gardens.</p>
+                    </aside>
+
+                    <footer class="text-center mt-5 pt-4 border-top">
+                        <p>Last updated: January 2025</p>
+                    </footer>
+                </div>
+
+                <div class="mt-5">
+                    <h3>HTML Features Demonstrated:</h3>
+                    <ul>
+                        <li><strong>Semantic tags:</strong> <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;aside&gt;</code>, <code>&lt;footer&gt;</code></li>
+                        <li><strong>Accessibility:</strong> <code>aria-label</code> for navigation, <code>alt</code> text for images</li>
+                        <li><strong>Content structure:</strong> Proper heading hierarchy (<code>&lt;h1&gt;</code> to <code>&lt;h4&gt;</code>)</li>
+                        <li><strong>Media:</strong> <code>&lt;figure&gt;</code> and <code>&lt;figcaption&gt;</code> for images</li>
+                        <li><strong>Forms:</strong> Semantic form elements (though not shown here, used in contact forms)</li>
+                    </ul>
+                </div>
+
+                <div class="alert alert-info mt-4">
+                    <h5><i class="bi bi-info-circle-fill"></i> Why This Matters</h5>
+                    <p>Using semantic HTML helps screen readers understand page structure, improves SEO by helping search engines understand content, and makes the code easier to maintain. This "Our Story" page uses HTML5 semantic elements to clearly define different parts of the content.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-black text-white-50 text-center py-4">
+        <div class="container">
+            <p>&copy; 2025 Aurora Brews. A demonstration site for CET138 Full Stack Development.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
